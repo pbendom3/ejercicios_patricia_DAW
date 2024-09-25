@@ -9,8 +9,8 @@ public class Main {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         Ejercicios ejercicio = new Ejercicios();
-       // ejercicio.actividad_inicial();
-        ejercicio.ejercicio1();
+        ejercicio.actividad_inicial();
+       // ejercicio.ejercicio1();
 
     }
 }
