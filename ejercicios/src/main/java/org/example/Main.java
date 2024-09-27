@@ -12,11 +12,19 @@ public class Main {
 //        ejercicio.actividad_inicial();
        // ejercicio.ejercicio1();
 
-        Operadores operadores = new Operadores();
+
+        Ejercicios ejercicios =  new Ejercicios();
+       // ejercicios.actividad_inicial();
+        ejercicios.ejercicio3();
+
+//        Excepciones excepciones = new Excepciones();
+//        excepciones.control_excepciones();
+
+       // Operadores operadores = new Operadores();
        // operadores.aritmeticos();
         //operadores.asignacion();
         //operadores.relacionales();
-        operadores.logicos();
+       // operadores.logicos();
 
     }
 }
