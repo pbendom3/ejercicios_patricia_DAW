@@ -13,9 +13,9 @@ public class Main {
        // ejercicio.ejercicio1();
 
 
-        Ejercicios ejercicios =  new Ejercicios();
+     //   Ejercicios ejercicios =  new Ejercicios();
        // ejercicios.actividad_inicial();
-        ejercicios.ejercicio3();
+       // ejercicios.ejercicio3();
 
 //        Excepciones excepciones = new Excepciones();
 //        excepciones.control_excepciones();
@@ -25,6 +25,13 @@ public class Main {
         //operadores.asignacion();
         //operadores.relacionales();
        // operadores.logicos();
+//
+//        Examen examen = new Examen();
+//        examen.ejercicio1();;
+        //      examen.ejercicio2();
+
+        CosasStrings cosas = new CosasStrings();
+        cosas.caracteres();
 
     }
 }
