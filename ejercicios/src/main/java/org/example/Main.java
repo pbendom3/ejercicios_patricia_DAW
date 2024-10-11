@@ -31,7 +31,7 @@ public class Main {
         //      examen.ejercicio2();
 
         CosasStrings cosas = new CosasStrings();
-        cosas.caracteres();
+        cosas.ejercicio4();
 
     }
 }

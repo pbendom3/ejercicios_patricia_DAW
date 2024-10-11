@@ -1,5 +1,8 @@
 package org.example;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class CosasStrings {
 
     public void caracteres(){
@@ -58,6 +61,67 @@ public class CosasStrings {
         }
 
         
+
+    }
+
+
+    public void ejercicio3(){
+
+        Scanner teclado = new Scanner(System.in);
+        boolean err = true;
+        int n = 0;
+        int m = 0;
+
+        while (err){
+            try{
+                System.out.println("Introduce un número...");
+                n = teclado.nextInt();
+                System.out.println("Introduce otro número para quitar las cifras al anterior...");
+                m = teclado.nextInt();
+                if (n>m){
+                    err=false;
+                }else{
+                    System.out.println("No se pueden quitar más cifras de las que hay.");
+                }
+
+            }catch (InputMismatchException e){
+                System.out.println("El formato no es correcto (numérico)");
+                teclado.nextLine();
+            }
+        }
+
+        String n_string = Integer.toString(n);
+        int tamanyo = n_string.length();
+
+        n_string = n_string.substring(0, tamanyo-m);
+
+        System.out.println("El número sin las " + m + " cifras es " + n_string);
+
+
+
+    }
+
+    public void ejercicio4(){
+
+        Scanner teclado = new Scanner (System.in);
+
+        System.out.println("Introduce una frase: ");
+        String frase = teclado.nextLine();
+        frase = " " + frase + " ";
+       // frase = frase.replace(".", " ");
+        frase=frase.replaceAll("[^\\p{Alpha}]+"," "); //eliminamos caracteres especiales
+        frase = frase.toLowerCase();
+
+        System.out.println("Introduce una subcadena: ");
+        String subcadena = teclado.nextLine();
+        subcadena = " " + subcadena + " ";
+
+        int fraselength = frase.length();
+        int frasesinsubcadena = frase.replace(subcadena, "").length();
+
+        int division = (fraselength - frasesinsubcadena) / subcadena.length();
+        System.out.println(division);
+
 
     }
 
