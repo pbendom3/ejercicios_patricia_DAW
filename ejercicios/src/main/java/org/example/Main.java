@@ -32,9 +32,11 @@ public class Main {
 
 //        CosasStrings cosas = new CosasStrings();
 //        cosas.ejercicio4();
+//
+//        Excepciones excepciones = new Excepciones();
+//        excepciones.excepciones();
 
-        Excepciones excepciones = new Excepciones();
-        excepciones.excepciones();
-
+        Actividad_excepciones generaciones = new Actividad_excepciones();
+        generaciones.generacion();
     }
 }
