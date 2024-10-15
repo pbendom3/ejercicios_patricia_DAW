@@ -30,8 +30,11 @@ public class Main {
 //        examen.ejercicio1();;
         //      examen.ejercicio2();
 
-        CosasStrings cosas = new CosasStrings();
-        cosas.ejercicio4();
+//        CosasStrings cosas = new CosasStrings();
+//        cosas.ejercicio4();
+
+        Excepciones excepciones = new Excepciones();
+        excepciones.excepciones();
 
     }
 }
