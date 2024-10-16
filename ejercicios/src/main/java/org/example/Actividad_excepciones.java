@@ -23,45 +23,87 @@ public class Actividad_excepciones {
 
         boolean error = false;
 
-        if (modo.equals("1")){
+        switch (modo){
 
-            System.out.println("Introduce tu año de nacimiento: ");
-            String anyo = teclado.next();
+            case "1":
+                System.out.println("Introduce tu año de nacimiento: ");
+                String anyo = teclado.next();
 
-            try{
-                anyo_nacimiento = Integer.parseInt(anyo);
-            }catch(NumberFormatException e1){
-                System.out.println("El formato del año no es correcto. " + e1.getMessage());
-            }
+                try{
+                    anyo_nacimiento = Integer.parseInt(anyo);
+                }catch(NumberFormatException e1){
+                    System.out.println("El formato del año no es correcto. " + e1.getMessage());
+                }
 
-            if (anyo_nacimiento < 1900 || anyo_nacimiento > anyo_actual){
-                System.out.println("El año introducido no es correcto.");
+                if (anyo_nacimiento < 1900 || anyo_nacimiento > anyo_actual){
+                    System.out.println("El año introducido no es correcto.");
+                    error=true;
+                }
+                break;
+
+            case "2":
+                System.out.println("Introduce tu edad: ");
+                int edad = 0;
+
+                if(teclado.hasNextInt()){
+                    edad = teclado.nextInt();
+                }else{
+                    System.out.println("El formato de la edad es incorrecto.");
+                    error=true;
+                }
+
+                if (edad < 0){
+                    System.out.println("La edad introducida no es correcta.");
+                    error=true;
+                }else{
+                    anyo_nacimiento = anyo_actual-edad;
+                }
+                break;
+
+            default:
+                System.out.println("El modo no existe.");
                 error=true;
-            }
-
-        } else if (modo.equals("2")) {
-
-            System.out.println("Introduce tu edad: ");
-            int edad = 0;
-
-            if(teclado.hasNextInt()){
-                edad = teclado.nextInt();
-            }else{
-                System.out.println("El formato de la edad es incorrecto.");
-                error=true;
-            }
-
-            if (edad < 0){
-                System.out.println("La edad introducida no es correcta.");
-                error=true;
-            }else{
-                anyo_nacimiento = anyo_actual-edad;
-            }
-
-        }else{
-            System.out.println("El modo no existe.");
-            error=true;
         }
+
+//        if (modo.equals("1")){
+//
+//            System.out.println("Introduce tu año de nacimiento: ");
+//            String anyo = teclado.next();
+//
+//            try{
+//                anyo_nacimiento = Integer.parseInt(anyo);
+//            }catch(NumberFormatException e1){
+//                System.out.println("El formato del año no es correcto. " + e1.getMessage());
+//            }
+//
+//            if (anyo_nacimiento < 1900 || anyo_nacimiento > anyo_actual){
+//                System.out.println("El año introducido no es correcto.");
+//                error=true;
+//            }
+//
+//        } else if (modo.equals("2")) {
+//
+//            System.out.println("Introduce tu edad: ");
+//            int edad = 0;
+//
+//            if(teclado.hasNextInt()){
+//                edad = teclado.nextInt();
+//            }else{
+//                System.out.println("El formato de la edad es incorrecto.");
+//                error=true;
+//            }
+//
+//            if (edad < 0){
+//                System.out.println("La edad introducida no es correcta.");
+//                error=true;
+//            }else{
+//                anyo_nacimiento = anyo_actual-edad;
+//            }
+//
+//        }else{
+//            System.out.println("El modo no existe.");
+//            error=true;
+//        }
 
         if (!error){
             if (anyo_nacimiento>=1900 && anyo_nacimiento<=1927){
