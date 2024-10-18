@@ -36,7 +36,12 @@ public class Main {
 //        Excepciones excepciones = new Excepciones();
 //        excepciones.excepciones();
 
-        Actividad_excepciones generaciones = new Actividad_excepciones();
-        generaciones.generacion();
+//        Actividad_excepciones generaciones = new Actividad_excepciones();
+//        generaciones.generacion();
+
+        Bucles bucles = new Bucles();
+        bucles.ejercicio2();
+
+
     }
 }
