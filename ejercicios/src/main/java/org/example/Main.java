@@ -39,8 +39,8 @@ public class Main {
 //        Actividad_excepciones generaciones = new Actividad_excepciones();
 //        generaciones.generacion();
 
-        Bucles bucles = new Bucles();
-        bucles.ejercicio2();
+        Aleatorios aleatorios = new Aleatorios();
+        aleatorios.ejercicio2();
 
 
     }
