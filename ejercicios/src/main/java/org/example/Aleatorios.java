@@ -56,7 +56,7 @@ public class Aleatorios {
 
             posicion = aleatorio.nextInt(caracteres.length());
             contrasenya += caracteres.charAt(posicion);
-           
+
         }
 
         System.out.println("La contraseña generada es: " + contrasenya);
