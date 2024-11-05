@@ -41,8 +41,8 @@ public class Main {
 
 //        Aleatorios aleatorios = new Aleatorios();
 //        aleatorios.ejercicio2();
-        Examen_UD2 examen = new Examen_UD2();
-        examen.ejercicio2();
+        Vectores vectores = new Vectores();
+        vectores.ejercicio3();
 
 
     }
