@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -51,7 +52,9 @@ public class Vectores {
     public void ejercicio2(){
 
         Scanner teclado = new Scanner(System.in);
-        int numeros[] = new int[5];
+        int numeros[] = new int[4];
+
+        int ultima_posicion = numeros[numeros.length-1];
 
         System.out.println("Introduce los números a invertir...");
 
@@ -61,10 +64,24 @@ public class Vectores {
 
         }
 
-        for(int i=numeros.length-1;i>=0;i--){
-            System.out.print(" " + numeros[i] + " ");
+        int tam_mitad = numeros.length / 2;
+        int aux;
+
+        for (int i=0;i<tam_mitad;i++){
+
+            aux = numeros[i];
+            numeros[i]=numeros[numeros.length-1-i];
+            numeros[numeros.length-1-i] =  aux;
+
         }
 
+//        for(int i=numeros.length-1;i>=0;i--){
+//            System.out.print(" " + numeros[i] + " ");
+//        }
+
+        for (int i = 0; i < numeros.length ; i++) {
+            System.out.print(" " + numeros[i] + " ");
+        }
 
 
     }
@@ -98,6 +115,73 @@ public class Vectores {
         }
 
         System.out.println("\n El número " + num + " aparece " + contador +" veces en el array.");
+
+
+
+
+    }
+
+    public void ejercicio5(){
+
+        int numeros[] = {3,5,2,1,4};
+
+        int ultima_posicion = numeros[numeros.length-1];
+
+        for (int i=numeros.length-1;i>=0;i--){
+
+            if(i==0){
+                numeros[i] = ultima_posicion;
+            }else{
+                numeros[i] = numeros[i-1];
+            }
+
+        }
+
+        for (int i =0;i<numeros.length;i++){
+
+            System.out.print(numeros[i]);
+
+        }
+
+    }
+
+    public void vectores2(){
+
+        String palabras[] = {"Paco","Pepe","Juan","Maria"};
+
+        for(String i : palabras){
+
+            System.out.print(i);
+
+        }
+
+        String texto_vector = Arrays.toString(palabras);
+        System.out.println("\n " + texto_vector);
+
+        String palabras2[] = palabras;
+
+        palabras2[0]="Francisco";
+
+        System.out.println(palabras);
+        System.out.println(palabras2);
+        System.out.print(Arrays.toString(palabras));
+        System.out.print(Arrays.toString(palabras2));
+
+        String palabras3[] =  palabras.clone();
+
+        palabras3[1] = "Lourdes";
+        System.out.println(palabras3);
+        System.out.print(Arrays.toString(palabras));
+        System.out.print(Arrays.toString(palabras3));
+
+        String nombres_chachis[] = new String[2];
+
+        System.arraycopy(palabras,0,nombres_chachis,0,2);
+
+
+        System.out.print(Arrays.toString(nombres_chachis));
+
+
 
 
 

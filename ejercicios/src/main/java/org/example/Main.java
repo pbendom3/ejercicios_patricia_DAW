@@ -42,7 +42,7 @@ public class Main {
 //        Aleatorios aleatorios = new Aleatorios();
 //        aleatorios.ejercicio2();
         Vectores vectores = new Vectores();
-        vectores.ejercicio3();
+        vectores.vectores2();
 
 
     }
