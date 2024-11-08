@@ -181,9 +181,96 @@ public class Vectores {
 
         System.out.print(Arrays.toString(nombres_chachis));
 
+        hasta10:
+        for (int i=0;i<10;i++){
+            hasta5:
+            for (int j=0; j<5;j++){
+                System.out.println(j);
+                break hasta10;
+            }
+        }
 
 
 
+
+
+
+    }
+
+    public void ejercicio4(){
+
+        Scanner teclado = new Scanner(System.in);
+
+        int enteros[] = {4,3,5,19,34,75,4};
+
+        int enteros2[] = new int[enteros.length-1];
+
+        System.out.println("Introduce una posición a eliminar...");
+        int eliminar = teclado.nextInt();
+
+        System.out.println(Arrays.toString(enteros));
+
+        for (int i = 0; i < enteros.length-1; i++) {
+
+            if (i < eliminar){
+                enteros2[i] = enteros[i];
+            }else{
+                enteros2[i] = enteros[i+1];
+            }
+
+        }
+
+        System.out.println(Arrays.toString(enteros2));
+
+
+    }
+
+    public void samurais(){
+
+        Scanner teclado = new Scanner(System.in);
+        int intro_equipo = 1;
+
+        do {
+
+            System.out.println("Equipo " + intro_equipo);
+
+            System.out.println("Introduce potencia de los samurais: ");
+            String entrada_equipo = teclado.nextLine();
+            String equipo[] = entrada_equipo.split(" ");
+            int equipo1[];
+            int equipo2[];
+            int potencia = 0;
+
+            if (equipo.length == 7){
+
+                int equipo_int[] = new int[equipo.length];
+
+                for (int i = 0; i < equipo.length; i++) {
+
+                    equipo_int[i] = Integer.parseInt(equipo[i]);
+                    potencia += equipo_int[i];
+
+                }
+
+                if (potencia != 30){
+                    System.out.println("ERROR. La potencia total no suma 30.");
+                    continue;
+                }else{
+                    if (intro_equipo==1){
+                        intro_equipo=2;
+                        equipo1 = equipo_int.clone();
+                    }else{
+                        equipo2 = equipo_int.clone();
+                        intro_equipo = 3;
+                    }
+
+                }
+
+            }
+
+        }while(intro_equipo<=2);
+
+        System.out.println("Hola");
 
 
     }
