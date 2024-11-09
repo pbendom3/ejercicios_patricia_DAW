@@ -268,6 +268,7 @@ public class Vectores {
 
             }else{
                  System.out.println("ERROR. No hay 7 samuráis.");
+                 System.out.println(Arrays.toString(equipo));
             }
 
         }while(intro_equipo<=2);
