@@ -266,6 +266,8 @@ public class Vectores {
 
                 }
 
+            }else{
+                 System.out.println("ERROR. No hay 7 samuráis.");
             }
 
         }while(intro_equipo<=2);
