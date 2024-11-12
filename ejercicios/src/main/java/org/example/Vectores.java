@@ -383,6 +383,8 @@ public class Vectores {
             pares_sorteo = "impar";
         }
 
+        System.out.println("Ha tocado " + numero_sorteo +  " " +  color_sorteo + " " + pares_sorteo);
+
         //// falta dar premios
 
 
