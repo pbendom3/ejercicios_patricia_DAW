@@ -386,8 +386,19 @@ public class Vectores {
         System.out.println("Ha tocado " + numero_sorteo +  " " +  color_sorteo + " " + pares_sorteo);
 
         //// falta dar premios
-
-
+        if(numero!=0 && numero_sorteo==numero && color_sorteo.equals(color) && pares_sorteo.equals(par)){
+            System.out.println("HAS GANADO!!");
+        } else if (numero!=0 && color_sorteo.equals(color)) {
+            System.out.println("Has acertado el color.");
+        } else if (numero!=0 && pares_sorteo.equals(par)) {
+            System.out.println("Has acertado la opción par/impar");
+        } else if (numero==numero_sorteo && numero != 0) {
+            System.out.println("Has acertado el número");
+        } else if (numero==0 && numero_sorteo==0) {
+            System.out.println("HAS GANADO y los demás usuarios pierden.");
+        }else{
+            System.out.println("Has perdido.");
+        }
 
 
     }
