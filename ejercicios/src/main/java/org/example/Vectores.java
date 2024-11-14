@@ -403,4 +403,48 @@ public class Vectores {
 
     }
 
+    public void ordenar(){
+
+        int numeros[] = {4,3,10,34,21};
+        System.out.println(Arrays.toString(numeros));
+
+        Arrays.sort(numeros);
+        System.out.println(Arrays.toString(numeros));
+
+        int num = -34;
+
+        int posicion = Arrays.binarySearch(numeros,num);
+
+        System.out.println(posicion);
+
+
+    }
+
+    public void duplicados1(){
+
+        int original[] = {3,3,5,10,16,25,25};
+
+        System.out.println(Arrays.toString(original));
+
+        int auxiliar[] =  new int[original.length];
+
+        int limpio[];
+
+        for (int i = 0; i < original.length; i++) {
+            //original[i] vs original [i+1]
+            if (i!=original.length-1 && original[i]==original[i+1]){
+                System.out.println("Duplicado: " + original[i]);
+            }else{
+                auxiliar[i] = original[i];
+            }
+
+        }
+
+        System.out.println(Arrays.toString(auxiliar));
+
+
+        //FALTA VECTOR LIMPIO
+
+    }
+
 }
