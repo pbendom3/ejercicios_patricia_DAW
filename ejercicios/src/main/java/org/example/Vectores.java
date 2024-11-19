@@ -540,7 +540,49 @@ public class Vectores {
         int limpio[] = Arrays.stream(original).distinct().toArray();
         System.out.println(Arrays.toString(limpio));
 
+    }
 
+    public void triangulo(){
+
+        Scanner teclado = new Scanner(System.in);
+        int altura = teclado.nextInt();
+
+        for(int i=altura;i>=1;i--){
+            for(int j=altura;j>=i;j--){
+
+                System.out.print("*");
+
+            }
+            System.out.println("");
+        }
+
+        for (int i = 0; i <=altura ; i++) {
+            for (int j = 0; j <i ; j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+
+
+
+
+    }
+
+    public void tablas(){
+
+        System.out.println("TABLAS DE MULTIPLICAR!!!");
+
+        for (int i = 1; i <=10 ; i++) {
+            System.out.println("TABLA DEL " + i);
+            for (int j = 1; j <=10 ; j++) {
+
+                System.out.println(i + "x" + j + "=" + i*j);
+
+            }
+
+        }
+
+//CUANDO SEPAMOS MATRICES IMPRIMIR EN COLUMNAS
 
     }
 
