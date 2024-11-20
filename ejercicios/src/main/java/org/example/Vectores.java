@@ -586,4 +586,31 @@ public class Vectores {
 
     }
 
+    public void primos(){
+
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("introduce m: ");
+        int m = teclado.nextInt();
+
+        System.out.println("Primos: ");
+
+        antonio:
+        for (int i = 2; i <= m; i++) {
+
+            for (int j = i-1; j >=2 ; j--) {
+
+                if(i%j==0){
+                    continue antonio;
+                }
+
+            }
+
+            System.out.print(i + " ");
+
+        }
+
+
+
+    }
+
 }
