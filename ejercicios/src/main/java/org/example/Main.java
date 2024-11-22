@@ -42,7 +42,7 @@ public class Main {
 //        Aleatorios aleatorios = new Aleatorios();
 //        aleatorios.ejercicio2();
         Matrices matriz = new Matrices();
-        matriz.matrices2();
+        matriz.vectores_2();
 
 
     }
