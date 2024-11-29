@@ -41,8 +41,8 @@ public class Main {
 
 //        Aleatorios aleatorios = new Aleatorios();
 //        aleatorios.ejercicio2();
-        Matrices matriz = new Matrices();
-        matriz.vectores_2();
+        Bingo bingo = new Bingo();
+        bingo.bingo();
 
 
     }
