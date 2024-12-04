@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Bingo {
 
-    public void bingo(){
+    public static void bingo(){
 
         Random aleatorio = new Random();
         Scanner teclado = new Scanner(System.in);
