@@ -24,10 +24,8 @@ class CuadradoTest {
         ByteArrayOutputStream salida = new ByteArrayOutputStream();
         System.setOut(new PrintStream(salida));
 
-        Cuadrado cuadrado = new Cuadrado();
-
         //llamamos al metodo que procesa la entrada
-        int resultado = cuadrado.pedirNumero();
+        int resultado = Cuadrado.pedirNumero();
 
         //verificamos que el valor que devuelve es el esperado (-1)
         assertEquals(-1, resultado);
