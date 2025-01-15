@@ -10,11 +10,15 @@ public class Recursividad {
 
     public static void main (String[] args) throws IOException, InterruptedException {
 
-      String palabra = "hola";
+      long num = 1000101001;
 
-      palabra_vector = palabra.toCharArray();
-      int posicion_final = palabra_vector.length;
-      del_reves_texto(posicion_final-1);
+      //System.out.println(aBinario2(num));
+
+      if(esBinario(num)){
+          System.out.println("es binario");
+      }else{
+          System.out.println("no es");
+      }
 
     }
 
@@ -98,5 +102,61 @@ public class Recursividad {
         }
 
     }
+
+    public static boolean ordenada(int posicion){
+
+        if (posicion<palabra_vector.length-1){
+            if(palabra_vector[posicion]<=palabra_vector[posicion+1]){
+                return ordenada(posicion+1);
+            }else{
+                return false;
+            }
+        }
+
+        return true;
+
+    }
+
+    public static boolean esBinario(long numero){
+
+        if(numero > 9){
+            if(numero%10==0 || numero%10==1){
+                return esBinario(numero/10);
+            }else{
+                return false;
+            }
+        }
+
+        if(numero==0 || numero==1){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
+    public static String aBinario(int numero){
+
+        if(numero==0 || numero==1){
+            return Integer.toString(numero);
+        }else{
+            return aBinario(numero/2)+numero%2;
+        }
+
+    }
+
+    public static int aBinario2(int numero){
+
+        if(numero==0 || numero==1){
+            return numero;
+        }else{
+            return numero%2+10*aBinario2(numero/2);
+        }
+
+    }
+
+
+
+
 
 }
